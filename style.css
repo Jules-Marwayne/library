@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "shortstack";
+    src: url("./ShortStack-Regular.ttf");
+}
+
+@keyframes squeeze {
+    0% {transform: scale(1);}
+    25% {transform: scale(1.1, 0.9);}
+    75% {transform: scale(0.9, 1.1);}
+    100% {transform: scale(1);}
+}
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "shortstack";
+    font-weight: 400;
+}
+
+body {
+    background-image: url("./bg-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 59px;
+}
+
+button {
+    background: #B4DDE9;
+    border: none;
+}
+
+button:hover {
+    animation: squeeze 0.3s ease-out 1;
+    cursor: pointer;
+}
+
+#book {
+    height: 47px;
+    width: 164px;
+    border-radius: 16px;
+    box-shadow: 0px 5px 5px 0px #A2B4C999;
+    font-size: 20px;
+    line-height: 25px;
+    margin: 20px;
+}
+
+#submit {
+    padding: 10px 20px;
+    border-radius: 16px;
+    margin: auto;
+}
+
+#darken {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.32);
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+}
+
+form {
+    width: 371px;
+    border-radius: 59px;
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 15%;
+    left: calc((100% - 371px) / 2);
+    margin: auto;
+    transform: scale(0);
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: flex;
+}
+
+label:not([for="read"]) {
+    flex-direction: column;
+}
+
+input:not([type="checkbox"]) {
+    padding: 5px 10px;
+    text-align: left;
+    height: 36px;
+    border: none;
+    border-radius: 13px;
+    background: #E8E8E8;
+}
+
+input:focus {
+    outline: none;
+}
+
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 20px;
+}
+
+.card {
+    width: 217px;
+    height: 281px;
+    padding: 15px;
+    background: #9C9870;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 8px 8px 0px #9C987099;
+}
+
+.card > button {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+}
